@@ -1,0 +1,50 @@
+using System;
+
+class URI
+{
+    static void Main(string[] args)
+    {
+        double valor = double.Parse(Console.ReadLine());
+
+        int centavos = (int)Math.Round(valor * 100);
+
+        Console.WriteLine("NOTAS:");
+
+        Console.WriteLine((centavos / 10000) + " nota(s) de R$ 100.00");
+        centavos %= 10000;
+
+        Console.WriteLine((centavos / 5000) + " nota(s) de R$ 50.00");
+        centavos %= 5000;
+
+        Console.WriteLine((centavos / 2000) + " nota(s) de R$ 20.00");
+        centavos %= 2000;
+
+        Console.WriteLine((centavos / 1000) + " nota(s) de R$ 10.00");
+        centavos %= 1000;
+
+        Console.WriteLine((centavos / 500) + " nota(s) de R$ 5.00");
+        centavos %= 500;
+
+        Console.WriteLine((centavos / 200) + " nota(s) de R$ 2.00");
+        centavos %= 200;
+
+        Console.WriteLine("MOEDAS:");
+
+        Console.WriteLine((centavos / 100) + " moeda(s) de R$ 1.00");
+        centavos %= 100;
+
+        Console.WriteLine((centavos / 50) + " moeda(s) de R$ 0.50");
+        centavos %= 50;
+
+        Console.WriteLine((centavos / 25) + " moeda(s) de R$ 0.25");
+        centavos %= 25;
+
+        Console.WriteLine((centavos / 10) + " moeda(s) de R$ 0.10");
+        centavos %= 10;
+
+        Console.WriteLine((centavos / 5) + " moeda(s) de R$ 0.05");
+        centavos %= 5;
+
+        Console.WriteLine((centavos / 1) + " moeda(s) de R$ 0.01");
+    }
+}
